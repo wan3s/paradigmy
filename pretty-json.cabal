@@ -1,0 +1,63 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: e8dc37acd585a3df449af0c9ec3fe63e82d4916acd27400fca8a4c1ee381f120
+
+name:           pretty-json
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/pretty-json#readme>
+homepage:       https://github.com/githubuser/pretty-json#readme
+bug-reports:    https://github.com/githubuser/pretty-json/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2020 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/pretty-json
+
+library
+  exposed-modules:
+      Lib
+      Types
+  other-modules:
+      Paths_pretty_json
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable pretty-json-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_pretty_json
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , pretty-json
+  default-language: Haskell2010
+
+test-suite pretty-json-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_pretty_json
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , pretty-json
+  default-language: Haskell2010
